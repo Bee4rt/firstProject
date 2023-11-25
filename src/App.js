@@ -1,22 +1,14 @@
 import "./App.css";
 
-import React, { useState } from "react";
+import React from "react";
+import Count from "./components/Count";
+import Tasklist from "./components/Tasklist";
 
 function App() {
-  //let count = 0;
-  const [count, setCount] = useState(0);
-
-  function handelAdd() {
-    setCount(count + 1);
-  }
-  function handelSub() {
-    setCount(count - 1);
-  }
   return (
-    <div className="box">
-      <p>{count}</p>
-      <button onClick={handelAdd}>ADD</button>
-      <button onClick={handelSub}>SUB</button>
+    <div className="App">
+      <Count />
+      <Tasklist />
     </div>
   );
 }
