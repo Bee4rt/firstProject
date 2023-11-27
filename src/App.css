@@ -15,6 +15,13 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 10px;
 }
+.box2 {
+  max-width: 200px;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px;
+}
 
 .num {
   font-size: 25px;
@@ -52,8 +59,8 @@ a {
 }
 
 h1 {
-  font-size: 28px;
-  text-align: center;
+  font-size: 22px;
+  text-align: s;
   margin: 20px;
 }
 
@@ -142,4 +149,69 @@ button.trigger {
 
 .hidden {
   display: none;
+}
+/* Add task */
+.addtask {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+}
+
+.addtask form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.addtask label {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.addtask input {
+  font-size: 18px;
+  padding: 7px;
+  border: 1px solid #878787;
+  border-radius: 5px;
+  flex-grow: 1;
+  margin: 10px;
+}
+
+.addtask input:focus {
+  outline: none;
+}
+
+.addtask select {
+  font-size: 18px;
+  padding: 7px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.addtask button {
+  font-size: 16px;
+  padding: 7px 10px;
+  margin: 10px;
+  background-color: rgb(1, 177, 101);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.addtask span {
+  font-size: 16px;
+  padding: 7px 10px;
+  margin: 10px;
+  background-color: rgb(177, 42, 1);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
