@@ -2,25 +2,21 @@ import React, { useState } from "react";
 import TaskCard from "./TaskCard";
 import CardBox from "./CardBox";
 
-function Tasklist() {
-  const [tasks, setTasks] = useState([
-    { id: 123, name: "Learn React Js", completed: true },
-    { id: 456, name: "Learn React Native", completed: false },
-    { id: 789, name: "Learn Vue Js", completed: false },
-  ]);
-
+function Tasklist({ tasks, setTasks }) {
   const [show, setShow] = useState(true);
 
   function handleDelete(id) {
     setTasks(tasks.filter((task) => task.id !== id));
   }
   return (
-    <>
+    <section className="taskList">
       <ul>
-        <h1 className="Title">Task List</h1>
-        <button className="trigger" onClick={() => setShow(!show)}>
-          Toggle
-        </button>
+        <div className="header">
+          <h1>TaskList</h1>
+          <button className="trigger" onClick={() => setShow(!show)}>
+            {show ? "Hide Tasks" : "Show Tasks"}
+          </button>
+        </div>
         {show &&
           tasks.map((task) => (
             <TaskCard key={task.id} task={task} handleDelete={handleDelete} />
@@ -45,7 +41,7 @@ function Tasklist() {
           readable content of a page when looking at its layout.
         </p>
       </CardBox>
-    </>
+    </section>
   );
 }
 

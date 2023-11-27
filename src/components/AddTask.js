@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddTask() {
+function AddTask({ tasks, setTasks }) {
   const [taskValue, setTaskValue] = useState("");
   const [progress, setProgress] = useState(false);
 
@@ -19,7 +19,7 @@ function AddTask() {
       name: taskValue,
       completed: Boolean(progress),
     };
-    console.log(task);
+    setTasks([...tasks, task]);
     handleReset();
   };
 
